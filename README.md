@@ -1,5 +1,5 @@
 
-🏥 Telemedicine Access for Rural Areas
+#🏥 Telemedicine Access for Rural Areas
 
 A low-bandwidth optimized telemedicine platform designed to connect rural patients with doctors efficiently. This project aims to reduce unnecessary travel, improve healthcare communication, and provide accessible medical support in remote villages.
 
