@@ -1,0 +1,9 @@
+{
+  "name": "Rural Telemedicine Portal – Nabha Healthcare",
+  "short_name": "Nabha Health",
+  "start_url": ".\/index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#166534",
+  "icons": []
+}

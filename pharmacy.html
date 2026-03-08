@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharmacy | Nabha Healthcare</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="./index.html">←</a>
+    <h1 data-i18n="pharmacy.title">Pharmacy – Local Stock</h1>
+    <div class="lang-switcher">
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="pa">ਪੰਜਾਬੀ</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 data-i18n="pharmacy.search">Search Medicines</h2>
+      <input id="medQuery" placeholder="Paracetamol, ORS..." />
+      <button class="btn" onclick="searchMeds()" data-i18n="pharmacy.searchBtn">Search</button>
+      <ul id="medList"></ul>
+      <div class="note" data-i18n="pharmacy.realtime">Real-time updates (demo)</div>
+    </section>
+  </main>
+
+  <footer class="footer">© Nabha Healthcare</footer>
+
+  <script src="./i18n/i18n.js" defer></script>
+  <script src="./main.js" defer></script>
+  <script src="./pharmacy.js" defer></script>
+</body>
+</html>

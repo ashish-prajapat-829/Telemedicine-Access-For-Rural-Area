@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Portal | Nabha Healthcare</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="./index.html">←</a>
+    <h1 data-i18n="patient.title">Patient Portal</h1>
+    <div class="lang-switcher">
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="pa">ਪੰਜਾਬੀ</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 data-i18n="patient.auth">Register / Login (Aadhaar / Phone)</h2>
+      <form id="authForm">
+        <label>
+          <span data-i18n="patient.aadhaar">Aadhaar Number</span>
+          <input type="text" inputmode="numeric" pattern="\\d{12}" placeholder="1234 5678 9012" />
+        </label>
+        <div class="or" data-i18n="common.or">OR</div>
+        <label>
+          <span data-i18n="patient.phone">Phone Number</span>
+          <input type="tel" placeholder="9876543210" />
+        </label>
+        <button type="button" class="btn" onclick="mockLogin()" data-i18n="patient.login">Login</button>
+      </form>
+    </section>
+
+    <section id="book" class="card">
+      <h2 data-i18n="patient.symptoms">Enter Symptoms (Text/Voice)</h2>
+      <textarea id="symptomsText" rows="3" placeholder="Fever, cough, fatigue..."></textarea>
+      <div class="actions">
+        <button class="btn" id="startVoice" data-i18n="patient.voice">Voice Input</button>
+        <button class="btn btn-secondary" onclick="submitSymptoms()" data-i18n="patient.submit">Submit</button>
+      </div>
+      <div id="aiSuggestion" class="note"></div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="patient.book">Book Video/Audio Consultation</h2>
+      <label>
+        <span data-i18n="patient.mode">Mode</span>
+        <select id="consultMode">
+          <option value="video" data-i18n="patient.video">Video</option>
+          <option value="audio" data-i18n="patient.audio">Audio</option>
+        </select>
+      </label>
+      <button class="btn" onclick="bookConsultation()" data-i18n="patient.bookCta">Book Slot</button>
+      <div id="webrtc" class="webrtc hidden">
+        <video id="localVideo" autoplay playsinline muted></video>
+        <video id="remoteVideo" autoplay playsinline></video>
+        <div class="actions">
+          <button class="btn" id="startCall" data-i18n="patient.startCall">Start Call (Demo)</button>
+          <button class="btn btn-danger" id="endCall" data-i18n="patient.endCall">End Call</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="records" class="card">
+      <h2 data-i18n="patient.records">Digital Health Records (Offline Available)</h2>
+      <button class="btn" onclick="saveRecordOffline()" data-i18n="patient.saveRecord">Save Sample Record Offline</button>
+      <ul id="recordsList"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">© Nabha Healthcare</footer>
+
+  <script src="./i18n/i18n.js" defer></script>
+  <script src="./main.js" defer></script>
+  <script src="./webrtc.js" defer></script>
+  <script src="./patient.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Punjab Health Dept</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="./index.html">←</a>
+    <h1 data-i18n="admin.title">Admin Dashboard – Punjab Health Dept</h1>
+    <div class="lang-switcher">
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="pa">ਪੰਜਾਬੀ</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2 data-i18n="admin.doctors">Active Doctors</h2>
+      <div id="doctorsCount" class="stat">0</div>
+    </section>
+    <section class="card">
+      <h2 data-i18n="admin.patients">Patient Volume</h2>
+      <div id="patientsCount" class="stat">0</div>
+    </section>
+    <section class="card">
+      <h2 data-i18n="admin.medicines">Medicine Distribution</h2>
+      <div id="medsCount" class="stat">0</div>
+    </section>
+  </main>
+
+  <footer class="footer">© Nabha Healthcare</footer>
+
+  <script src="./i18n/i18n.js" defer></script>
+  <script src="./main.js" defer></script>
+  <script src="./admin.js" defer></script>
+</body>
+</html>

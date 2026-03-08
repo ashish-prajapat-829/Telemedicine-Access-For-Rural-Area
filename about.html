@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & Contact | Nabha Healthcare</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="./index.html">←</a>
+    <h1 data-i18n="about.title">About & Contact</h1>
+    <div class="lang-switcher">
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="pa">ਪੰਜਾਬੀ</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 data-i18n="about.project">About the Project</h2>
+      <p data-i18n="about.desc">Rural Telemedicine Portal aims to deliver accessible, multilingual healthcare to rural communities with offline-first design, AI assistance, and low-bandwidth teleconsultations.</p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="about.helpline">Helpline Numbers</h2>
+      <ul>
+        <li>108 – Ambulance</li>
+        <li>104 – Health Helpline</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">© Nabha Healthcare</footer>
+
+  <script src="./i18n/i18n.js" defer></script>
+  <script src="./main.js" defer></script>
+</body>
+</html>

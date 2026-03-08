@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Portal | Nabha Healthcare</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="./index.html">←</a>
+    <h1 data-i18n="doctor.title">Doctor Portal</h1>
+    <div class="lang-switcher">
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="pa">ਪੰਜਾਬੀ</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 data-i18n="doctor.login">Secure Login</h2>
+      <input placeholder="Doctor ID" />
+      <input placeholder="Password" type="password" />
+      <button class="btn" onclick="mockDoctorLogin()" data-i18n="doctor.loginBtn">Login</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="doctor.history">View Patient History</h2>
+      <input id="patientId" placeholder="Patient ID" />
+      <button class="btn" onclick="loadHistory()" data-i18n="doctor.load">Load</button>
+      <ul id="historyList"></ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="doctor.tele">Start Telemedicine Call</h2>
+      <div id="webrtc" class="webrtc hidden">
+        <video id="localVideo" autoplay playsinline muted></video>
+        <video id="remoteVideo" autoplay playsinline></video>
+        <div class="actions">
+          <button class="btn" id="startCall" data-i18n="doctor.startCall">Start Call (Demo)</button>
+          <button class="btn btn-danger" id="endCall" data-i18n="doctor.endCall">End Call</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="doctor.prescription">Upload Digital Prescription</h2>
+      <textarea id="prescription" rows="4" placeholder="Rx: ..."></textarea>
+      <button class="btn" onclick="uploadPrescription()" data-i18n="doctor.upload">Upload</button>
+    </section>
+  </main>
+
+  <footer class="footer">© Nabha Healthcare</footer>
+
+  <script src="./i18n/i18n.js" defer></script>
+  <script src="./main.js" defer></script>
+  <script src="./webrtc.js" defer></script>
+  <script src="./doctor.js" defer></script>
+</body>
+</html>
